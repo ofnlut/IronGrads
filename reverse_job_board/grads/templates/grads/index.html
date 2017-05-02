@@ -1,8 +1,17 @@
 {% extends 'grads/base.html' %}
+{% block content %}
+{% load staticfiles %}
 {% for grad in order_grads %}
   <div>
-    <li>
-      <p>{{ grad }}</p>
-    </li>
+    {%if grad.Picture %}
+      <img src="{{ grad.Picture.url }}" alt="img" class="img-responsive"/>
+    {% endif %}
+    <ul>
+      <li>{{ grad.first_name|add:' '|add:grad.last_name }}</li>
+      <li>{{ grad.Github }}</li>
+      <li>{{ grad.Email }}</li>
+      <li>{{ grad.Linkedin }}</li>
+    </ul>
   </div>
 {% endfor %}
+{% endblock content %}
