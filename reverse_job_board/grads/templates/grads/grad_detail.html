@@ -1,0 +1,22 @@
+{% extends 'grads/base.html' %}
+{% block content %}
+<div class="grad">
+  {% if grad.Picture %}
+    <img src="{{ grad.Picture.url }}" alt="img" width="300" height="300">
+  {% else %}
+    <img src="{{ grad.Github }}.png" alt="img" width="300" height="300">
+  {% endif %}
+  <h1>{{ grad.first_name|add:' '|add:grad.last_name}}</h1>
+  <p><a href="mailto:{{ grad.Email}}">{{ grad.Email }}</a></p>
+  <!-- <p>{{ grad_url }}</p> -->
+  <!-- <p>{{ titles }}</p> -->
+  <div class="wraper">
+    <span>
+      {% for a_repo in parsed_repo %}
+        <p><a href="https://github.com{{ a_repo.link }}">{{ a_repo.title }}</a></p>
+        <p>{{ a_repo.disc }}</p>
+      {% endfor %}
+    </span>
+  </div>
+</div>
+{% endblock content %}

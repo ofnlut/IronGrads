@@ -1,0 +1,106 @@
+/* Start of Base Styling*/
+html{
+  background-color: #c9cdd1;
+}
+.page-header{
+  margin: auto;
+  background-color: #243746;
+  font-family: 'Tisa-Pro-Medi';
+  padding-bottom: 45px;
+  padding-top: 20px;
+}
+
+.page-header img{
+  float: left;
+}
+.page-header h1{
+  padding-top: 15px;
+  margin-left: auto;
+}
+body{
+  background-color: #c9cdd1;
+  margin: 0;
+}
+h1 a{
+  color: #FFFFFF;
+}
+.content{
+  padding-top: 10px;
+  background-color: #c9cdd1;
+}
+
+/* End of Base styling */
+
+/* Start of Index styling */
+.w{
+  overflow: hidden;
+}
+section{
+  margin: -1%;
+  padding: 20px;
+}
+
+.wraper{
+  float: left;
+  margin: 1%;
+  padding-top: 10px;
+  padding-right: 10px;
+}
+
+ul {
+  padding-left: 10px;
+  padding-top: 0px;
+  list-style-type: none;
+}
+
+#Name-header{
+  font-family: 'Tisa-Pro-Medi' !important;
+}
+#contacts{
+  font-family: 'Tisa-Sans-Medium';
+  font-size: 130%;
+}
+
+
+.c-content-card {
+    background-color: #ffffff;
+    border: 1px solid rgba(32,47,55,0.1);
+    border-radius: 3px;
+    box-shadow: 0 1px 1px rgba(32,47,55,0.1);
+    margin-bottom: 36px;
+    overflow: hidden;
+    text-decoration: none;
+    -webkit-transition: box-shadow 0.1s ease, -webkit-transform 0.1s ease;
+    transition: box-shadow 0.1s ease, -webkit-transform 0.1s ease;
+    transition: box-shadow 0.1s ease, transform 0.1s ease;
+    transition: box-shadow 0.1s ease, transform 0.1s ease, -webkit-transform 0.1s ease;
+
+}
+.c-content-card img{
+  min-width: 100%;
+  width: 200px;
+  height: 200px;
+  background-position: 50% 50%;
+}
+.c-content-card__header {
+    background-color: #39474e;
+    background-position: center center;
+    background-size: cover;
+    height: 170px;
+    overflow: hidden;
+    position: relative;
+    -webkit-transition: -webkit-transform 0.1s ease;
+    transition: -webkit-transform 0.1s ease;
+    transition: transform 0.1s ease;
+    transition: transform 0.1s ease, -webkit-transform 0.1s ease;
+}
+
+/* End of Index styling */
+@font-face {
+  font-family: 'Tisa-Pro-Medi';
+  src: local('../fonts/Tisa-typeface/Tisa Pro/TisaPro-Medi.otf');
+}
+@font-face {
+  font-family: 'Tisa-Sans-Medium';
+  src: local('../fonts/Tisa-typeface/Tisa Sans Pro/TisaSansPro-Medium.otf')
+}

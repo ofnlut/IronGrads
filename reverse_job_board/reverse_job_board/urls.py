@@ -22,6 +22,7 @@ from grads import views
 
 
 urlpatterns = [
+    url(r'^accounts/', include('allauth.urls')),
     url(r'^grads/', include('grads.urls')),
     url(r'^admin/', admin.site.urls),
 ]

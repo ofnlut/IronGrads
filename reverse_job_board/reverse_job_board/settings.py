@@ -31,6 +31,7 @@ DEBUG = True
 INSTALLED_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
+    'django.contrib.sites',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
@@ -40,9 +41,17 @@ INSTALLED_APPS = [
     'whitenoise.runserver_nostatic',
     'django.contrib.staticfiles',
 
+    #third-party apps
+    'allauth',
+    'allauth.account',
+    'allauth.socialaccount',
+    #authintication provider(s)
+    'allauth.socialaccount.providers.github',
+
     #local apps
     'grads',
 ]
+SITE_ID=1
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -73,6 +82,11 @@ TEMPLATES = [
             'debug': DEBUG,
         },
     },
+]
+
+AUTHENTICATION_BACKENDS = [
+    'django.contrib.auth.backends.ModelBackend',
+    'allauth.account.auth_backends.AuthenticationBackend',
 ]
 
 WSGI_APPLICATION = 'reverse_job_board.wsgi.application'

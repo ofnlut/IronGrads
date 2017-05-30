@@ -1,19 +1,21 @@
+{% load staticfiles %}
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Iron Grads of DC</title>
+    <script src="https://use.fontawesome.com/cd9b4f0aa1.js"></script>
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="{% static 'css/grads.css' %}">
+    <title>Iron Grads of DC</title>
   </head>
   <body>
     <div class="page-header">
-      <h1><a href="#">Iron Grads DC</a></h1>
+      <img src="{% static 'images/TIY-logo-white-png.png'%}" alt="" width="100px" height="100px">
+      <h1><a href="/grads">Iron Grads DC</a></h1>
     </div>
-    <div class="content container">
-      <div class="col-md-4">
-        {% block content %}
-        {% endblock %}
-      </div>
+    <div class="content">
+      {% block content %}
+      {% endblock %}
     </div>
   </body>
 </html>
