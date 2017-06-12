@@ -1,22 +1,26 @@
 {% extends 'grads/base.html' %}
 {% block content %}
 <div class="grad">
-  {% if grad.Picture %}
-    <img src="{{ grad.Picture.url }}" alt="img" width="300" height="300">
-  {% else %}
-    <img src="{{ grad.Github }}.png" alt="img" width="300" height="300">
-  {% endif %}
-  <h1>{{ grad.first_name|add:' '|add:grad.last_name}}</h1>
-  <p><a href="mailto:{{ grad.Email}}">{{ grad.Email }}</a></p>
+  <div class="grad-img">
+    {% if grad.Picture %}
+      <img align='middle' src="{{ grad.Picture.url }}" alt="img" width="300" height="300">
+    {% else %}
+      <img src="{{ grad.Github }}.png" alt="img" width="300" height="300">
+    {% endif %}
+  </div>
+  <h1 class="grad-name">{{ grad.first_name|add:' '|add:grad.last_name}}</h1>
+  <!-- <p><a href="mailto:{{ grad.Email}}">{{ grad.Email }}</a></p> -->
   <!-- <p>{{ grad_url }}</p> -->
   <!-- <p>{{ titles }}</p> -->
-  <div class="wraper">
-    <span>
+  <div class="pinned-repos ">
+    <ul>
       {% for a_repo in parsed_repo %}
-        <p><a href="https://github.com{{ a_repo.link }}">{{ a_repo.title }}</a></p>
-        <p>{{ a_repo.disc }}</p>
+        <li>
+          <span class="pinned-repos-title"><a href="https://github.com{{ a_repo.link }}"><h2>{{ a_repo.title }}</h2></a></span>
+          <p class="pinned-repos-disc">{{ a_repo.disc }}</p>
+        </li>
       {% endfor %}
-    </span>
+    </ul>
   </div>
 </div>
 {% endblock content %}

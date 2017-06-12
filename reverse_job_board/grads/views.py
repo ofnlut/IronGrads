@@ -1,6 +1,12 @@
 from django.shortcuts import render, get_object_or_404
 from django.http import HttpResponse, HttpRequest
 from django.template import loader
+from django.dispatch import receiver
+from django.views import View
+
+from django.db.models.signals import post_save
+from django.conf import settings
+from django.contrib.auth.mixins import LoginRequiredMixin
 
 from .models import Graduate
 
@@ -55,3 +61,15 @@ def grad_detail(request, pk):
     }
 
     return render(request, 'grads/grad_detail.html', context)
+
+def get_profleurl(request, id):
+
+    profileurl = Graduate.objects.get(first_name=id)
+
+    return render(request, 'grads/profile.html', {'profileurl':profileurl})
+
+class CreateProfileView(LoginRequiredMixin, View):
+
+    @receiver(post_save, sender=settings.AUTH_USER_MODEL)
+    def create_grad_detail(sender, created, instance, **kwargs):
+        pass

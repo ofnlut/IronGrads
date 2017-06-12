@@ -51,7 +51,7 @@ INSTALLED_APPS = [
     #local apps
     'grads',
 ]
-SITE_ID=1
+
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -149,3 +149,7 @@ MEDIA_URL = '/media/'
 # Simplified static file serving.
 # https://warehouse.python.org/project/whitenoise/
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+
+SITE_ID=2
+
+LOGIN_REDIRECT_URL = '/grads/'

@@ -3,5 +3,6 @@ from . import views
 
 urlpatterns = [
     url(r'^$', views.index),
-    url(r'^grad/(?P<pk>\d+)/$', views.grad_detail, name='grad_detail')
+    url(r'^grad/(?P<pk>\d+)/$', views.grad_detail, name='grad_detail'),
+    url(r'^profile/(?P<id>.+?)/$', views.get_profleurl)
 ]
