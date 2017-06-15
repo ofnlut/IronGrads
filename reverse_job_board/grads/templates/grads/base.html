@@ -19,6 +19,7 @@
         <a  class="col-md-3 col-md-offset-3 btn btn-block btn-social btn-github" style="float:right; width:20%;" href="{% url 'account_logout' %}">
         <span class="fa fa-sign-out"></span>Sign out
         </a>
+        <a href="{% url 'grad_profile' %}">edit profile</a>
       {% else %}
         <a class=" col-md-3 col-md-offset-3 btn btn-block btn-social btn-github"  style="float:right; width:20%;" href="{% provider_login_url 'github' %}">
           <span class="fa fa-github"></span>Sign in with Github

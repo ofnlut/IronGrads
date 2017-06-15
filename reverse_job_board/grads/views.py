@@ -2,13 +2,17 @@ from django.shortcuts import render, get_object_or_404
 from django.http import HttpResponse, HttpRequest
 from django.template import loader
 from django.dispatch import receiver
+from django.views.generic.edit import UpdateView
 from django.views import View
 
 from django.db.models.signals import post_save
 from django.conf import settings
 from django.contrib.auth.mixins import LoginRequiredMixin
+from django.contrib.auth.models import User
+from django.core.urlresolvers import reverse_lazy
 
 from .models import Graduate
+from .forms import EditProfileForm
 
 import requests
 from bs4 import BeautifulSoup
@@ -68,8 +72,30 @@ def get_profleurl(request, id):
 
     return render(request, 'grads/profile.html', {'profileurl':profileurl})
 
-class CreateProfileView(LoginRequiredMixin, View):
+@receiver(post_save, sender=settings.AUTH_USER_MODEL)
+def create_grad_detail(sender, created, instance, **kwargs):
+    if created:
+        Graduate.objects.create(user=instance)
 
-    @receiver(post_save, sender=settings.AUTH_USER_MODEL)
-    def create_grad_detail(sender, created, instance, **kwargs):
-        pass
+class EditProfileView(LoginRequiredMixin, UpdateView):
+
+
+    template_name = 'grads/edit_profile.html'
+    success_url = reverse_lazy('grad')
+    model = Graduate
+    fields = ('first_name','last_name','job_title','Email','Github','Linkedin')
+
+    def get_context_data(self, **kwargs):
+        context = super(EditProfileView, self).get_context_data(**kwargs)
+        context['User'] = User.objects.order_by('username')
+        return context
+
+    def get_object(self):
+        username = self.request.user
+        grad_user = Graduate.objects.get(user=username)
+
+        if self.request.method == 'POST':
+            form = EditProfileForm(data=self.request.POST, instance=grad_user)
+            if form.is_valid():
+                form.save()
+        return get_object_or_404(Graduate)

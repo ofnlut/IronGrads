@@ -8,7 +8,7 @@ from PIL import Image
 # Create your models here.
 
 class Graduate(models.Model):
-    author = models.ForeignKey('auth.User')
+    author = models.ForeignKey('auth.User', null=True)
     user = models.OneToOneField(settings.AUTH_USER_MODEL, related_name='details', null=True)
     first_name = models.CharField(max_length=300, default="Iron")
     last_name = models.CharField(max_length=300, default="Yard")
