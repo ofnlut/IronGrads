@@ -16,10 +16,14 @@
       <img src="{% static 'images/TIY-logo-white-png.png'%}" alt="" width="100px" height="100px">
       <h1><a href="/grads">Iron Grads DC</a></h1>
       {% if user.is_authenticated %}
-        <a  class="col-md-3 col-md-offset-3 btn btn-block btn-social btn-github" style="float:right; width:20%;" href="{% url 'account_logout' %}">
-        <span class="fa fa-sign-out"></span>Sign out
-        </a>
-        <a href="{% url 'grad_profile' %}">edit profile</a>
+        <div class="col-md-3 col-md-offset-3" style="float:right; margin:-30px;">
+          <a class=" btn btn-block btn-social btn-github"  href="{% url 'grad_profile' %}">
+            <span class="fa fa-pencil-square-o"></span>edit profile
+          </a>
+          <a  class="btn btn-block btn-social btn-github" href="{% url 'account_logout' %}">
+          <span class="fa fa-sign-out"></span>Sign out
+          </a>
+        </div>
       {% else %}
         <a class=" col-md-3 col-md-offset-3 btn btn-block btn-social btn-github"  style="float:right; width:20%;" href="{% provider_login_url 'github' %}">
           <span class="fa fa-github"></span>Sign in with Github
