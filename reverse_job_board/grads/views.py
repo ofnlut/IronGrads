@@ -68,6 +68,8 @@ def grad_detail(request, pk):
 
 def get_profleurl(request, id):
 
+    # Generate a url based off the users
+
     profileurl = Graduate.objects.get(first_name=id)
 
     return render(request, 'grads/profile.html', {'profileurl':profileurl})
@@ -78,8 +80,13 @@ def create_grad_detail(sender, created, instance, **kwargs):
         Graduate.objects.create(user=instance)
 
 class EditProfileView(LoginRequiredMixin, UpdateView):
+    """
+    Allows logged in graduates to edit their profile.
 
-
+    Todo:
+        Actually save changes.
+        Write tests
+    """
     template_name = 'grads/edit_profile.html'
     success_url = reverse_lazy('grad')
     model = Graduate
