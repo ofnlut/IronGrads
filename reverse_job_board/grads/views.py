@@ -84,11 +84,10 @@ class EditProfileView(LoginRequiredMixin, UpdateView):
     Allows logged in graduates to edit their profile.
 
     Todo:
-        Actually save changes.
         Write tests
     """
     template_name = 'grads/edit_profile.html'
-    success_url = reverse_lazy('grad')
+    success_url = reverse_lazy('grads')
     model = Graduate
     fields = ('first_name','last_name','job_title','Email','Github','Linkedin')
 
