@@ -5,9 +5,11 @@ html{
 .page-header{
   margin: auto;
   background-color: #243746;
-  font-family: 'Tisa-Pro-Medi';
+  font-family: 'Tisa-Sans-Pro';
+  font-weight: 200;
   padding-bottom: 45px;
   padding-top: 20px;
+  -webkit-font-smoothing: antialiased;
 }
 
 .page-header img{
@@ -72,7 +74,11 @@ ul {
     text-decoration: none;
 }
 .u-2{
-  width: 40% !important;
+  display: flex;
+  justify-content: center;
+  margin-left: 35%;
+  margin-top: 5%;
+  width: 30% !important;
 }
 .c-content-card {
     background-color: #ffffff;
@@ -108,11 +114,32 @@ ul {
 }
 
 /* End of Index styling */
+.name-group{
+  display: inline-block;
+}
+label{
+  font-family: "Tisa-Sans-Medium";
+  font-weight: 400;
+  -webkit-font-smoothing: antialiased;
+  font-size: 1em;
+}
+.c-btn{
+  border: 0 solid transparent;
+  border-radius: 3px;
+  background-color: #485671;
+  color: #ffffff;
+  text-shadow: none;
+  cursor: pointer;
+}
 @font-face {
   font-family: 'Tisa-Pro-Medi';
-  src: local('../fonts/Tisa-typeface/Tisa Pro/TisaPro-Medi.otf');
+  src: url('../fonts/Tisa-typeface/Tisa Pro/TisaPro-Medi.otf');
 }
 @font-face {
   font-family: 'Tisa-Sans-Medium';
-  src: local('../fonts/Tisa-typeface/Tisa Sans Pro/TisaSansPro-Medium.otf')
+  src: url('../fonts/Tisa-typeface/Tisa Sans Pro/TisaSansPro-Medium.otf');
+}
+@font-face {
+  font-family:  'Tisa-Sans-Pro';
+  src: url('../fonts/Tisa-typeface/Tisa Sans Pro/TisaSansPro.otf');
 }

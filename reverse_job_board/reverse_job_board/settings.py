@@ -42,12 +42,13 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
 
     #third-party apps
+    'widget_tweaks',
     'allauth',
     'allauth.account',
     'allauth.socialaccount',
     #authintication provider(s)
     'allauth.socialaccount.providers.github',
-
+    
     #local apps
     'grads',
 ]
