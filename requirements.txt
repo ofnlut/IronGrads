@@ -7,3 +7,4 @@ Pillow==4.1.0
 requests==2.14.2
 beautifulsoup4==4.6.0
 django-allauth==0.32.0
+django-widget-tweaks==1.4.1
