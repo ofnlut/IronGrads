@@ -3,9 +3,9 @@
 <div class="grad">
   <div class="grad-img">
     {% if grad.Picture %}
-      <img align='middle' src="{{ grad.Picture.url }}" alt="img" width="300" height="300">
+      <img align='middle' src="{{ grad.Picture.url }}" alt="img" width="300" height="300" class="img-rounded">
     {% else %}
-      <img src="{{ grad.Github }}.png" alt="img" width="300" height="300">
+      <img src="{{ grad.Github }}.png" alt="img" width="300" height="300" class="img-rounded">
     {% endif %}
   </div>
   <h1 class="grad-name">{{ grad.first_name|add:' '|add:grad.last_name}}</h1>

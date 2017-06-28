@@ -26,7 +26,7 @@ def index(request):
     return render(request, 'grads/index.html', {'order_grads':order_grads})
 
 
-def grad_detail(request, pk):
+def grad_detail(request, slug):
     """
     Take the graduate's github url and parse some information off
     the pinned repositories section on the profile page.
@@ -36,7 +36,7 @@ def grad_detail(request, pk):
         Remove unused content
 
     """
-    grad = get_object_or_404(Graduate, pk=pk)
+    grad = get_object_or_404(Graduate, slug=slug)
     grad_url = Graduate.objects.get(first_name=grad).Github[17:]
 
     grad_repos = requests.get(Graduate.objects.get(first_name=grad).Github)
