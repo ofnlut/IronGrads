@@ -57,7 +57,7 @@ ul {
 }
 
 #Name-header{
-  font-family: 'Tisa-Pro-Medi' !important;
+  font-family: 'Tisa-Pro-Medi';
 }
 #contacts{
   font-family: 'Tisa-Sans-Medium';
@@ -78,7 +78,7 @@ ul {
   justify-content: center;
   margin-left: 35%;
   margin-top: 5%;
-  width: 30% !important;
+  width: 30%;
 }
 .c-content-card {
     background-color: #ffffff;
