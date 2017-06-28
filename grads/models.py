@@ -26,6 +26,7 @@ class Graduate(models.Model):
             self.last_pk = User.objects.latest('pk')
             self.first_name = self.last_pk.first_name
             self.slug = slugify(self.first_name).title()
+            self.Github = "https://github.com/" + self.last_pk.get_username()
         super(Graduate, self).save(*args, **kwargs)
 
     class Meta:
