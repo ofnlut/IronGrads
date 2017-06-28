@@ -6,13 +6,15 @@
 .grad-name{
   display: flex;
   justify-content: center;
+  font-family: "Tisa-Sans-Medium";
+  -webkit-font-smoothing: antialiased;
 }
 .grad-img{
   display: flex;
   justify-content: center;
 }
 .pinned-repos{
-  margin-left: 20em; 
+  margin-left: 20em;
   width: 70%;
 }
 

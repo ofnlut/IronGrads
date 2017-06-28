@@ -12,13 +12,15 @@
   <!-- <p><a href="mailto:{{ grad.Email}}">{{ grad.Email }}</a></p> -->
   <!-- <p>{{ grad_url }}</p> -->
   <!-- <p>{{ titles }}</p> -->
-  <div class="pinned-repos ">
+  <div class="pinned-repos ",>
     <ul>
       {% for a_repo in parsed_repo %}
+      <a href="https://github.com{{ a_repo.link }}">
         <li>
-          <span class="pinned-repos-title"><a href="https://github.com{{ a_repo.link }}"><h2>{{ a_repo.title }}</h2></a></span>
+          <span class="pinned-repos-title"><h2>{{ a_repo.title }}</h2></span>
           <p class="pinned-repos-disc">{{ a_repo.disc }}</p>
         </li>
+      </a>
       {% endfor %}
     </ul>
   </div>
