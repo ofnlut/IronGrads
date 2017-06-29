@@ -1,24 +1,26 @@
 {% extends 'grads/base.html' %}
 {% block content %}
-<div class=".col-xs-6 .col-md-4">
-  <section>
-    {% for grad in order_grads %}
-      <div class="wraper">
-        <div class="c-content-card">
-          {%if grad.Picture %}
-            <img src="{{ grad.Picture.url }}" alt="img" align="middle" width="200" height="200"/>
-          {% else %}
-            <img src="{{ grad.Github }}.png" alt="img"  align="middle" width="200" height="200"/>
-          {% endif %}
-          <ul>
-            <li id="Name-header"><h2><a href="{% url 'grad_detail' slug=grad%}">{{ grad.first_name|add:' '|add:grad.last_name }}</a></h2></li>
-            <li><h5>{{ grad.job_title }}</h5></li>
-            <li><a id="contacts" href="{{ grad.Github }}"> <i class="fa fa-github fa-2x" aria-hidden="true"></i></a> <a id="contacts" href="{{ grad.Linkedin }}"><i class="fa fa-linkedin-square fa-2x" aria-hidden="true"></i></a></li>
-            <li></li>
-          </ul>
+<div class="showcase-wrapper">
+  <div class=".col-xs-6 .col-md-4">
+    <section>
+      {% for grad in order_grads %}
+        <div class="grad-wrapper">
+          <div class="c-content-card">
+            {%if grad.Picture %}
+              <img src="{{ grad.Picture.url }}" alt="img" align="middle" width="200" height="200"/>
+            {% else %}
+              <img src="{{ grad.Github }}.png" alt="img"  align="middle" width="200" height="200"/>
+            {% endif %}
+            <ul>
+              <li id="Name-header"><h2><a href="{% url 'grad_detail' slug=grad%}">{{ grad.first_name|add:' '|add:grad.last_name }}</a></h2></li>
+              <li><h5>{{ grad.job_title }}</h5></li>
+              <li><a id="contacts" href="{{ grad.Github }}"> <i class="fa fa-github fa-2x" aria-hidden="true"></i></a> <a id="contacts" href="{{ grad.Linkedin }}"><i class="fa fa-linkedin-square fa-2x" aria-hidden="true"></i></a></li>
+              <li></li>
+            </ul>
+          </div>
         </div>
-      </div>
-    {% endfor %}
-  </section>
+      {% endfor %}
+    </section>
+  </div>
 </div>
 {% endblock content %}
