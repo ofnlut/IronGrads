@@ -142,6 +142,69 @@ label{
   text-shadow: none;
   cursor: pointer;
 }
+
+.grad{
+  margin: 70px 40px 20px 150px;
+}
+
+.grad-name{
+  display: flex;
+  justify-content: center;
+  font-family: "Tisa-Sans-Medium";
+  -webkit-font-smoothing: antialiased;
+}
+.grad-img{
+  display: flex;
+  justify-content: center;
+
+}
+.pinned-repos{
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 900px;
+  width: 70%;
+}
+.pinned-repos li {
+  background-color: #ffffff;
+  border: 1px solid rgba(32,47,55,0.1);
+  border-radius: 3px;
+  box-shadow: 0 1px 1px rgba(32,47,55,0.1);
+  width: 20em;
+  height: 15em;
+  display: inline-block;
+  margin-bottom: 36px;
+  overflow: hidden;
+  text-decoration: none;
+  color: #c1c9d8;
+  border-radius: 3px;
+  font-family: 'Tisa-Sans-Medium';
+  padding-bottom: 10px;
+  vertical-align: top;
+}
+
+.pinned-repos-title{
+  display: flex;
+  justify-content: center;
+  font-size: 12px;
+  color: #202f37;
+}
+.pinned-repos-disc{
+  word-wrap: break-word;
+  color: #202f37;
+  font-family:'Tisa-Sans-Pro';
+  font-size: 2vmin;
+}
+
+
+
+
+
+
+
+
+
+
+
 @font-face {
   font-family: 'Tisa-Pro-Medi';
   src: url('../fonts/Tisa-typeface/Tisa Pro/TisaPro-Medi.otf');
@@ -153,4 +216,8 @@ label{
 @font-face {
   font-family:  'Tisa-Sans-Pro';
   src: url('../fonts/Tisa-typeface/Tisa Sans Pro/TisaSansPro.otf');
+}
+@@font-face {
+  font-family: "TisaSansPro-Light"
+  src: url('../fonts/Tisa-typeface/Tisa Sans Pro/TisaSansPro-Light.otf');
 }
