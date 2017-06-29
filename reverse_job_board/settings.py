@@ -21,7 +21,8 @@ PROJECT_ROOT = os.path.dirname(os.path.abspath(__file__))
 # See https://docs.djangoproject.com/en/1.10/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = "cpd3a8eli1%$rlby%(#9a&v086s#sg06hgp_=u&l50qb--)tq@"
+SECRET_KEY = os.environ['SECRET_TIY_KEY']
+
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -48,7 +49,7 @@ INSTALLED_APPS = [
     'allauth.socialaccount',
     #authintication provider(s)
     'allauth.socialaccount.providers.github',
-    
+
     #local apps
     'grads',
 ]
