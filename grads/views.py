@@ -104,4 +104,4 @@ class EditProfileView(LoginRequiredMixin, UpdateView):
             form = EditProfileForm(data=self.request.POST, instance=grad_user)
             if form.is_valid():
                 form.save()
-        return get_object_or_404(Graduate)
+        return get_object_or_404(Graduate, user=username)
