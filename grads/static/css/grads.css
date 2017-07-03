@@ -46,6 +46,23 @@ h1 a{
   background-color: #c9cdd1;
 }
 
+
+.footer-wrapper{
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  right: 0;
+  text-align: center;
+  background-color: #3c485e;
+}
+.footer-wrapper h2{
+  color: #FFFFFF;
+}
+.footer-wrapper i{
+  color: #EF8792;
+}
+
 /* End of Base styling */
 
 /*************************************/
@@ -170,6 +187,14 @@ label{
   display: flex;
   justify-content: center;
 
+}
+.contact-list{
+  display: flex;
+  justify-content: center;
+}
+.contact-list a{
+  margin-right: 10px;
+  margin-bottom: 10px;
 }
 .pinned-repos{
   margin-left: auto;

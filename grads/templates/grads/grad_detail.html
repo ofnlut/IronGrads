@@ -9,8 +9,12 @@
     {% endif %}
   </div>
   <h1 class="grad-name">{{ grad.first_name|add:' '|add:grad.last_name}}</h1>
-  <!-- <p><a href="mailto:{{ grad.Email}}">{{ grad.Email }}</a></p> -->
-  <!-- <p>{{ grad_url }}</p> -->
+  <h2 class="grad-name">{{ grad.job_title }}</h2>
+  <div class="contact-list">
+    <a href="mailto:{{ grad.Email}}"><i class="fa fa-envelope-o fa-3x" aria-hidden="true"></i></a>
+    <a href="{{ grad_url }}"><i class="fa fa-github fa-3x" aria-hidden="true"></i></a>
+    <a href="{{ grad.Linkedin }}"><i class="fa fa-linkedin-square fa-3x" aria-hidden="true"></i></a>
+  </div>
   <!-- <p>{{ titles }}</p> -->
   <div class="pinned-repos">
     <ul>
