@@ -1,0 +1,45 @@
+{% load staticfiles %}
+{% load socialaccount %}
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="https://use.fontawesome.com/cd9b4f0aa1.js"></script>
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="{% static 'css/grads.css' %}">
+    <link rel="stylesheet" href="{% static 'css/bootstrap-social.css'%}">
+    <title>Iron Grads of DC</title>
+    <meta name="charset" content="UTF-8">
+  </head>
+  <body>
+    <header class="page-header">
+      <div class="header-wrapper">
+        <img src="{% static 'images/TIY-logo-white-png.png'%}" alt="" width="75px" height="75px">
+        <h1><a href="/grads">Iron Grads DC</a></h1>
+        {% if user.is_authenticated %}
+          <div class="col-md-3 col-md-offset-3" style="float:right; margin:-30px;">
+            <a class=" btn btn-block btn-social btn-github"  href="{% url 'grad_profile' %}">
+              <span class="fa fa-pencil-square-o"></span>edit profile
+            </a>
+            <a  class="btn btn-block btn-social btn-github" href="{% url 'account_logout' %}">
+            <span class="fa fa-sign-out"></span>Sign out
+            </a>
+          </div>
+        {% else %}
+          <a class=" col-md-3 col-md-offset-3 btn btn-block btn-social btn-github"  style="float:right; width:20%;" href="{% provider_login_url 'github' %}">
+            <span class="fa fa-github"></span>Sign in with Github
+          </a>
+        {% endif %}
+      </header>
+    </div>
+    <div class="content">
+      {% block content %}
+      {% endblock %}
+    </div>
+    <footer class="end-content">
+      <div class="footer-wrapper">
+        <h2>Crafted with <i class="fa fa-heart" aria-hidden="true"></i></h2> 
+      </div>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,252 @@
+/*************************************/
+/******Start of base.html styles******/
+/*************************************/
+html{
+  background-color: #c9cdd1;
+}
+.header-wrapper{
+  padding-right: 50px;
+  padding-left: 50px;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1200px;
+}
+.page-header{
+  margin: auto;
+  background-color: #3c485e;
+  font-family: 'Tisa-Sans-Pro';
+  font-weight: 200;
+  padding-bottom: 45px;
+  padding-top: 20px;
+  -webkit-font-smoothing: antialiased;
+}
+
+.page-header img{
+  float: left;
+  margin-right: 10px;
+}
+.page-header h1{
+  padding-top: 20px;
+  text-decoration: none;
+}
+.header-wrapper h1 a:hover{
+  text-decoration: none;
+  color: #FFFFFF;
+}
+body{
+
+  background-color: #c9cdd1;
+  margin: 0;
+}
+h1 a{
+  color: #FFFFFF;
+}
+.content{
+  padding-top: 10px;
+  background-color: #c9cdd1;
+}
+
+
+.footer-wrapper{
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  right: 0;
+  text-align: center;
+  background-color: #3c485e;
+}
+.footer-wrapper h2{
+  color: #FFFFFF;
+}
+.footer-wrapper i{
+  color: #EF8792;
+}
+
+/* End of Base styling */
+
+/*************************************/
+/******Start of index.html styles*****/
+/*************************************/
+.w{
+  overflow: hidden;
+}
+section{
+  margin: -1%;
+  padding: 20px;
+}
+.showcase-wrapper{
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1100px;
+}
+.grad-wrapper{
+  float: left;
+  margin: 1%;
+  padding-top: 10px;
+  padding-right: 10px;
+}
+
+ul {
+  padding-left: 10px;
+  padding-top: 0px;
+  list-style-type: none;
+}
+
+#Name-header{
+  font-family: 'Tisa-Pro-Medi';
+}
+#contacts{
+  font-family: 'Tisa-Sans-Medium';
+  font-size: 130%;
+}
+
+.c-well {
+    background-color: #f5f8fa;
+    border: 1px solid rgba(32,47,55,0.1);
+    border-radius: 3px;
+    box-shadow: 0 1px 1px rgba(32,47,55,0.1);
+    margin-bottom: 36px;
+    padding: 36px;
+    text-decoration: none;
+}
+.u-2{
+  display: flex;
+  justify-content: center;
+  margin-left: 35%;
+  margin-top: 5%;
+  width: 30%;
+}
+.c-content-card {
+    background-color: #ffffff;
+    border: 1px solid rgba(32,47,55,0.1);
+    border-radius: 3px;
+    box-shadow: 0 1px 1px rgba(32,47,55,0.1);
+    margin-bottom: 36px;
+    overflow: hidden;
+    text-decoration: none;
+    -webkit-transition: box-shadow 0.1s ease, -webkit-transform 0.1s ease;
+    transition: box-shadow 0.1s ease, -webkit-transform 0.1s ease;
+    transition: box-shadow 0.1s ease, transform 0.1s ease;
+    transition: box-shadow 0.1s ease, transform 0.1s ease, -webkit-transform 0.1s ease;
+
+}
+.c-content-card img{
+  min-width: 100%;
+  width: 200px;
+  height: 200px;
+  background-position: 50% 50%;
+}
+.c-content-card__header {
+    background-color: #39474e;
+    background-position: center center;
+    background-size: cover;
+    height: 170px;
+    overflow: hidden;
+    position: relative;
+    -webkit-transition: -webkit-transform 0.1s ease;
+    transition: -webkit-transform 0.1s ease;
+    transition: transform 0.1s ease;
+    transition: transform 0.1s ease, -webkit-transform 0.1s ease;
+}
+
+/* End of Index styling */
+.name-group{
+  display: inline-block;
+}
+label{
+  font-family: "Tisa-Sans-Medium";
+  font-weight: 400;
+  -webkit-font-smoothing: antialiased;
+  font-size: 1em;
+}
+.c-btn{
+  border: 0 solid transparent;
+  border-radius: 3px;
+  background-color: #485671;
+  color: #ffffff;
+  text-shadow: none;
+  cursor: pointer;
+}
+
+
+/*************************************/
+/******Start of grad_detail styles****/
+/*************************************/
+.grad{
+  margin: 70px 40px 20px 150px;
+}
+
+.grad-name{
+  display: flex;
+  justify-content: center;
+  font-family: "Tisa-Sans-Medium";
+  -webkit-font-smoothing: antialiased;
+}
+.grad-img{
+  display: flex;
+  justify-content: center;
+
+}
+.contact-list{
+  display: flex;
+  justify-content: center;
+}
+.contact-list a{
+  margin-right: 10px;
+  margin-bottom: 10px;
+}
+.pinned-repos{
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 900px;
+  width: 70%;
+}
+.pinned-repos li {
+  background-color: #ffffff;
+  border: 1px solid rgba(32,47,55,0.1);
+  border-radius: 3px;
+  box-shadow: 0 1px 1px rgba(32,47,55,0.1);
+  width: 20em;
+  height: 15em;
+  display: inline-block;
+  margin-bottom: 36px;
+  overflow: hidden;
+  text-decoration: none;
+  color: #c1c9d8;
+  border-radius: 3px;
+  font-family: 'Tisa-Sans-Medium';
+  padding-bottom: 10px;
+  vertical-align: top;
+}
+
+.pinned-repos-title{
+  display: flex;
+  justify-content: center;
+  font-size: 12px;
+  color: #202f37;
+}
+.pinned-repos-disc{
+  word-wrap: break-word;
+  color: #202f37;
+  font-family:'Tisa-Sans-Pro';
+  font-size: 2vmin;
+}
+
+
+@font-face {
+  font-family: 'Tisa-Pro-Medi';
+  src: url('../fonts/Tisa-typeface/Tisa Pro/TisaPro-Medi.otf');
+}
+@font-face {
+  font-family: 'Tisa-Sans-Medium';
+  src: url('../fonts/Tisa-typeface/Tisa Sans Pro/TisaSansPro-Medium.otf');
+}
+@font-face {
+  font-family:  'Tisa-Sans-Pro';
+  src: url('../fonts/Tisa-typeface/Tisa Sans Pro/TisaSansPro.otf');
+}
+@@font-face {
+  font-family: "TisaSansPro-Light"
+  src: url('../fonts/Tisa-typeface/Tisa Sans Pro/TisaSansPro-Light.otf');
+}

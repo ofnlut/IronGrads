@@ -1,4 +1,6 @@
+*.sqlite3
 venv
 *.pyc
 staticfiles
 .env
+.DS_Store
