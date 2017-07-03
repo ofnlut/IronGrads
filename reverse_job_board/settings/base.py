@@ -25,7 +25,7 @@ SECRET_KEY = os.environ['SECRET_TIY_KEY']
 
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+
 
 # Application definition
 
