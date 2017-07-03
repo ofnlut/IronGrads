@@ -89,7 +89,7 @@ class EditProfileView(LoginRequiredMixin, UpdateView):
     template_name = 'grads/edit_profile.html'
     success_url = reverse_lazy('grads')
     model = Graduate
-    fields = ('first_name','last_name','job_title','Email','Github','Linkedin')
+    fields = ('first_name','last_name','job_title','Email','Linkedin')
 
     def get_context_data(self, **kwargs):
         context = super(EditProfileView, self).get_context_data(**kwargs)
