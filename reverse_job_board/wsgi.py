@@ -13,7 +13,7 @@ from django.core.wsgi import get_wsgi_application
 from whitenoise.django import DjangoWhiteNoise
 
 if 'DYNO' in os.environ:
-    os.environ.setdefault("DJANGO_SETTINGS_MODULE", "reverse_job_board.settings.local")
+    os.environ.setdefault("DJANGO_SETTINGS_MODULE", "reverse_job_board.settings.prod")
 else:
     os.environ.setdefault("DJANGO_SETTINGS_MODULE", "reverse_job_board.settings.local")
 
