@@ -152,6 +152,7 @@ MEDIA_URL = '/media/'
 MEDIAFILES_DIRS = (
     os.path.join(BASE_DIR, 'grads','media'),
 )
+WHITENOISE_ROOT = os.path.join(PROJECT_ROOT, 'grads')
 # Extra places for collectstatic to find static files.
 
 # Simplified static file serving.
