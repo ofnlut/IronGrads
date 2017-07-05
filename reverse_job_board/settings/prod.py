@@ -4,7 +4,7 @@ import dj_database_url
 
 DEBUG = False
 
-ALLOWED_HOSTS = ['iron-yard-grads.herokuapp.com']
+ALLOWED_HOSTS = ['.herokuapp.com']
 
 #Secure Middleware Stuff
 SECURE_HSTS_INCLUDE_SUBDOMAINS = True
