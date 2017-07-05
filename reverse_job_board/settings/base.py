@@ -145,7 +145,7 @@ ALLOWED_HOSTS = ['*']
 STATIC_URL = '/static/'
 STATIC_ROOT = 'staticfiles'
 STATICFILES_DIRS = (
-    location('grads/static/'),
+    'grads/static/',
 )
 
 MEDIA_ROOT = os.path.join(PROJECT_ROOT, 'media')
