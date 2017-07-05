@@ -4,7 +4,7 @@ import dj_database_url
 
 DEBUG = False
 
-ALLOWED_HOSTS = ['https://iron-yard-grads.herokuapp.com/','127.0.0.1']
+ALLOWED_HOSTS = env.list('DJANGO_ALLOWED_HOSTS', default=['example.com'])
 
 #Secure Middleware Stuff
 SECURE_HSTS_INCLUDE_SUBDOMAINS = True
