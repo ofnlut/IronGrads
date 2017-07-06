@@ -7,6 +7,8 @@ https://docs.djangoproject.com/en/1.10/topics/settings/
 
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/1.10/ref/settings/
+
+NOTE: DO NOT RUN BASE SETTING IN PRODUCTION
 """
 
 import os
@@ -25,7 +27,7 @@ SECRET_KEY = os.environ['SECRET_TIY_KEY']
 
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 # Application definition
 
