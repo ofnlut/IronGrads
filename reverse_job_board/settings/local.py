@@ -1,15 +1,4 @@
+#Local settings for development
 from .base import *
 
 DEBUG = True
-
-ALLOWED_HOSTS = ['.herokuapp.com']
-
-#Secure Middleware Stuff
-SESSION_COOKIE_SECURE = False
-SECURE_HSTS_SECONDS = 10
-CSRF_COOKIE_SECURE = False
-SECURE_SSL_REDIRECT = False
-SECURE_BROWSER_XSS_FILTER = False
-SECURE_CONTENT_TYPE_NOSNIFF = False
-CSRF_COOKIE_HTTPONLY = False
-X_FRAME_OPTIONS = 'DENY'
