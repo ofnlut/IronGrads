@@ -20,11 +20,12 @@ class Graduate(models.Model):
     Linkedin = models.URLField(max_length=600, blank=True)
     Picture = models.ImageField(upload_to='portait/', blank=True)
 
-
+    # Saves new Graduate and auto-fill with information from github
     def save(self, *args, **kwargs):
         if not self.id:
             self.last_pk = User.objects.latest('pk')
             self.first_name = self.last_pk.first_name
+            self.last_name = self.last_pk.last_name
             self.slug = slugify(self.first_name).title()
             self.Github = "https://github.com/" + self.last_pk.get_username()
         super(Graduate, self).save(*args, **kwargs)
