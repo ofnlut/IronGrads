@@ -52,7 +52,6 @@ h1 a{
 
 .footer-wrapper{
   position: absolute;
-  bottom: 0;
   right: 0;
   left: 0;
   right: 0;
@@ -66,11 +65,11 @@ h1 a{
   color: #EF8792;
 }
 .end-content{
-  bottom: 0;
-  height: 200px;
-  left: 0;
   position: absolute;
-  width: 100%;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 1rem;
 }
 /* End of Base styling */
 
