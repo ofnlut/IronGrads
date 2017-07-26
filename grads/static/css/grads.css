@@ -66,7 +66,7 @@ h1 a{
   bottom: 0;
   height: 200px;
   left: 0;
-  position: absolute;
+  position: relative;
   width: 100%;
 }
 /* End of Base styling */
