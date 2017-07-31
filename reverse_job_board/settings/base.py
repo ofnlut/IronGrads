@@ -157,4 +157,6 @@ STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 SITE_ID=2
 
+ACCOUNT_LOGOUT_ON_GET = True
+
 LOGIN_REDIRECT_URL = '/grads/'
