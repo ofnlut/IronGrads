@@ -4,6 +4,10 @@
 html{
   background-color: #c9cdd1;
 }
+a:hover   {
+  /* Applies to links under the pointer */
+  text-decoration:  none;
+  }
 .header-wrapper{
   padding-right: 50px;
   padding-left: 50px;
@@ -63,7 +67,6 @@ h1 a{
 }
 /* footer */
 .end-content{
-  bottom: auto;
 }
 /* End of Base styling */
 
@@ -233,7 +236,7 @@ label{
   word-wrap: break-word;
   color: #202f37;
   font-family:'Tisa-Sans-Pro';
-  font-size: 2vmin;
+  font-size: 1.8vmin;
 }
 
 
